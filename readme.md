@@ -1,5 +1,7 @@
 # Smarter Technology Technical Screen
-`main.go` contains all the logic. `SortPackage()` is a function that will sort packages based on a package's width, height, length, and mass. There is a `main()` function with a width, height, length and mass that can be changed to easily play with `SortPackage()`. This can be run by installing the dependencies with `go download` and then running `go run main.go` to run `main()`.
+This repository contains an implementation of the Smarter Technology technical screening implemented in Golang.
+
+`main.go` contains all the logic. `SortPackage()` is a function that will sort packages based on a package's width, height, length, and mass. There is a `main()` function with a width, height, length and mass that can be changed to easily play with `SortPackage()`. This can be run by first installing the dependencies with `go download` and then running `go run main.go` to run `main()`.
 
 `main_test.go` contains all the unit tests. These can be run by running `go run ./...`.
 
