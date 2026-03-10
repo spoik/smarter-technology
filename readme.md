@@ -1,7 +1,8 @@
 # Smarter Technology Technical Screen
 ## How to use this package
 ```go
-// Call SortPackage with a width, height, length, and mass to get the stack the package should be dispatched to. Width, height, and length are floats in centimeters. Mass is a float in kilograms.
+// Call SortPackage with a width, height, length, and mass to get the stack the package should be
+// dispatched to. Width, height, and length are floats in centimeters. Mass is a float in kilograms.
 //
 // If there is no error, err will be nil and stack will either be the "REJECTED", "SPECIAL", or "STANDARD" strings.
 //
