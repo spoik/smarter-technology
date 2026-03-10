@@ -1,8 +1,26 @@
 package main
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
-func SortPackage(width, height, length, mass float32) (string, error) {
+func main() {
+	width := 10.0
+	height := 10.0
+	length := 10.0
+	mass := 10.0
+	stack, err := SortPackage(width, height, length, mass)
+
+    if err != nil {
+        fmt.Printf("There was an issue sorting the package: %s\n", err)
+        return
+    }
+
+    fmt.Println("The package should be added to the", stack, "stack.")
+}
+
+func SortPackage(width, height, length, mass float64) (string, error) {
 	err := validateInput(width, height, length, mass)
 
 	if err != nil {
@@ -23,7 +41,7 @@ func SortPackage(width, height, length, mass float32) (string, error) {
 	return "STANDARD", nil
 }
 
-func validateInput(width, height, length, mass float32) error {
+func validateInput(width, height, length, mass float64) error {
 	if width <= 0 {
 		return errors.New("Width must be greater than 0.")
 	}
@@ -43,7 +61,7 @@ func validateInput(width, height, length, mass float32) error {
 	return nil
 }
 
-func isBulky(width, height, length float32) bool {
+func isBulky(width, height, length float64) bool {
 	if width >= 150 || height >= 150 || length >= 150 {
 		return true
 	}
@@ -56,6 +74,6 @@ func isBulky(width, height, length float32) bool {
 	return false
 }
 
-func isHeavy(mass float32) bool {
+func isHeavy(mass float64) bool {
 	return mass >= 20
 }

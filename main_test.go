@@ -9,9 +9,9 @@ import (
 func TestIsBulky(t *testing.T) {
 	type testCase struct {
 		description    string
-		width          float32
-		height         float32
-		length         float32
+		width          float64
+		height         float64
+		length         float64
 		expectedResult bool
 	}
 
@@ -71,7 +71,7 @@ func TestIsBulky(t *testing.T) {
 func TestIsHeavy(t *testing.T) {
 	type testCase struct {
 		description    string
-		mass           float32
+		mass           float64
 		expectedResult bool
 	}
 
@@ -101,10 +101,10 @@ func TestIsHeavy(t *testing.T) {
 func TestSortPackage(t *testing.T) {
 	type testCase struct {
 		description    string
-		width          float32
-		height         float32
-		length         float32
-		mass           float32
+		width          float64
+		height         float64
+		length         float64
+		mass           float64
 		expectedResult string
 	}
 
@@ -163,10 +163,10 @@ func TestSortPackage(t *testing.T) {
 func TestSortPackageInvalidParams(t *testing.T) {
 	type testCase struct {
 		description    string
-		width          float32
-		height         float32
-		length         float32
-		mass           float32
+		width          float64
+		height         float64
+		length         float64
+		mass           float64
 		expectedErrMsg string
 	}
 
