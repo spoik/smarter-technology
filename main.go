@@ -15,5 +15,8 @@ func main() {
 
     if err != nil {
         fmt.Printf("Failed to start server: %s\n", err)
+        return
     }
+
+    fmt.Println("Listening on port 80")
 }
