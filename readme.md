@@ -1,12 +1,13 @@
 # Smarter Technology Technical Screen
-## How to use this package
+`main.go` contains the all the logic. `SortPackage()` is a function that will sort packages based on a package's width, height, and length. `main_test.go` contains all the unit tests.
+
+## How to use `SortPackage()`
+Call SortPackage with a width, height, length, and mass to get the stack the package should be dispatched to. Width, height, and length are floats in centimeters. Mass is a float in kilograms.
+
+If there is no error, err will be nil and stack will either be the "REJECTED", "SPECIAL", or "STANDARD" strings.
+
+If there is an error, err will contain the error and stack will be the empty string.
 ```go
-// Call SortPackage with a width, height, length, and mass to get the stack the package should be
-// dispatched to. Width, height, and length are floats in centimeters. Mass is a float in kilograms.
-//
-// If there is no error, err will be nil and stack will either be the "REJECTED", "SPECIAL", or "STANDARD" strings.
-//
-// If there is an error, err will contain the error and stack will be the empty string.
 width := 10.0
 height := 10.0
 length := 10.0
